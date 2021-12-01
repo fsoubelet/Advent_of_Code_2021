@@ -55,5 +55,5 @@ How many measurements are larger than the previous measurement?
 import numpy as np
 
 if __name__ == "__main__":
-    inputs = np.loadtxt("input_1.txt")
+    inputs = np.loadtxt("inputs.txt")
     print(np.sum(inputs[1:] > inputs[:-1]))
