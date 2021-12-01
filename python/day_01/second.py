@@ -43,5 +43,7 @@ import numpy as np
 
 if __name__ == "__main__":
     inputs = np.loadtxt("inputs.txt", dtype=int)
+    # Create a new array stacking elements by three (first into stacked_by_three is
+    # inputs[0] + inputs[1] + inputs[2], second element is inputs[1] + inputs[2] + inputs[3], etc.)
     stacked_by_three = inputs[:-2] + inputs[1:-1] + inputs[2:]
-    print(np.sum(stacked_by_three[1:] > stacked_by_three[:-1]))
+    print(np.sum(stacked_by_three[1:] > stacked_by_three[:-1]))  # compare as for part 1

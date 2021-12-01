@@ -39,9 +39,12 @@ In this example, there are 5 sums that are larger than the previous sum.
 Consider sums of a three-measurement sliding window.
 How many sums are larger than the previous sum?
 """
+# Read input as array of integers
 f = open("inputs.txt")
-inputs = parse.(Int, readlines(f))
+inputs = parse.(Int, readlines(f))  # vectorise the parsing here
 close(f)
 
+# Create a new array stacking elements by three (first into stacked_by_three is
+# inputs[1] + inputs[2] + inputs[3], second element is inputs[2] + inputs[3] + inputs[4], etc.)
 stacked_by_three = inputs[1:end-2] + inputs[2:end-1] + inputs[3:end]
-println(sum(stacked_by_three[2:end] .> stacked_by_three[1:end-1]))
+println(sum(stacked_by_three[2:end] .> stacked_by_three[1:end-1]))  # compare as for part 1

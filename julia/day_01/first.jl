@@ -52,8 +52,10 @@ In the example above, the changes are as follows:
 In this example, there are 7 measurements that are larger than the previous measurement.
 How many measurements are larger than the previous measurement?
 """
+# Read input as array of integers
 f = open("inputs.txt")
-inputs = parse.(Int, readlines(f))
+inputs = parse.(Int, readlines(f))  # vectorise the parsing here
 close(f)
 
+# Sum which elements are larger than the previous element (vectorise comparison)
 println(sum(inputs[2:end] .> inputs[1:end-1]))
