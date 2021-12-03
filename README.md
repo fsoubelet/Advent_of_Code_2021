@@ -30,4 +30,5 @@ For now, the needed external packages are:
 |    **Python**     |     **Julia**     |
 | :---------------: | :---------------: |
 |   `numpy`    |                   |
+|   `pandas`    |                   |
 |   `taichi`    |                   |
