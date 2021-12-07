@@ -65,9 +65,7 @@ def find_oxygen_rating(inputs: pd.DataFrame) -> int:
         column_position += 1  # move to next position in the bits
 
     # Now we are left with a dataframe of only one row, just need to assemble it back to bits and then int
-    oxygen_rating_bits = "".join(
-        df.astype(str).to_numpy()[0]
-    )  # result bits as a numpy array cast to a string
+    oxygen_rating_bits = "".join(df.astype(str).to_numpy()[0])  # result bits as a numpy array cast to a string
     return int(oxygen_rating_bits, 2)  # convert to int before returning
 
 
@@ -82,9 +80,7 @@ def find_co2_scrubber_rating(inputs: pd.DataFrame) -> int:
         column_position += 1  # move to next position in the bits
 
     # Now we are left with a dataframe of only one row, just need to assemble it back to bits and then int
-    co2_scrubber_rating_bits = "".join(
-        df.astype(str).to_numpy()[0]
-    )  # result bits as a numpy array cast to a string
+    co2_scrubber_rating_bits = "".join(df.astype(str).to_numpy()[0])  # result bits as a numpy array cast to a string
     return int(co2_scrubber_rating_bits, 2)  # convert to int before returning
 
 
