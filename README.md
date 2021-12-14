@@ -31,4 +31,4 @@ For now, the needed external packages are:
 | :---------------: | :---------------: |
 |   `numpy`    |                   |
 |   `pandas`    |                   |
-|   `taichi`    |                   |
+|   `matplotlib`    |                   |
