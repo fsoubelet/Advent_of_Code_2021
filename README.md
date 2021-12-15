@@ -32,3 +32,4 @@ For now, the needed external packages are:
 |   `numpy`    |                   |
 |   `pandas`    |                   |
 |   `matplotlib`    |                   |
+|   `scikit-image`    |                   |
