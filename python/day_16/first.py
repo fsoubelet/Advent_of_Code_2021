@@ -153,9 +153,7 @@ def parse_message(binary_string: str) -> Tuple[int, int, int]:
     numbers = []
 
     # Ok, now we need to parse the sub-packets
-    if (
-        binary_string[pointer] == "0"
-    ):  # length type ID is 0, "the next 15 bits represent the total length in bits of the sub-packets contained in this packet"
+    if binary_string[pointer] == "0":  # the next 15 bits are the length in bits of the sub-packets contained in this packet
         len_subpackets = int(binary_string[pointer + 1 : pointer + 16], base=2)
         pointer += 16  # this will put us at the start of the first sub-packet (after these 15 bits)
         parse_until = pointer + len_subpackets  # this will be the end of the sub-packets
