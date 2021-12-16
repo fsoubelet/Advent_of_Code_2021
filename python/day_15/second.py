@@ -137,7 +137,7 @@ from first import get_shortest_path_cost
 def duplicate_array_with_additional_cost(array: np.ndarray, cost: int) -> np.ndarray:
     """Duplicate the provided array and add the desired cost with proper wrapping."""
     new_array = array + cost
-    new_array[new_array > 9] = (new_array[new_array > 9] - 9)  # this is the value-wrapping from 9 to 1
+    new_array[new_array > 9] = new_array[new_array > 9] - 9  # this is the value-wrapping from 9 to 1
     return new_array
 
 
